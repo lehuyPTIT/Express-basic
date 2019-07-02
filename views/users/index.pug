@@ -1,6 +1,7 @@
 h1 users
+a(href='/users/create') new
 form(action="/users/search",method="GET")
-	input(type="text",name="q")
+	input(type="text",name="q" value=value)
 	button search
 ul
 	each user in users

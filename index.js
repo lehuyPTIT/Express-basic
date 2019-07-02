@@ -2,6 +2,9 @@ var express=require('express');
 var app = express();
 var port=3000;
 
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
 app.set('view engine', 'pug');
 app.set('views', './views');
 
@@ -25,11 +28,17 @@ app.get('/users/search',function(req,res){
 	var matchedYsers=users.filter(function(user){
 		return user.name.toLowerCase().indexOf(q.toLowerCase()) !=-1;
 	})
-	res.render('users/index',{users:matchedYsers});
-	var searchBtn=document.getElementsByTagName("input");
-	searchBtn.value=q;
-
+	res.render('users/index',{users:matchedYsers,value:q});
 });
+
+app.get('/users/create',function(req,res){
+	res.render('users/create');
+})
+
+app.post('/users/create',function(req,res){
+	users.push(req.body);
+	res.redirect('/users');
+})
 
 app.listen(port,function(){
 	console.log(' Day la server cus tao '+ port);
