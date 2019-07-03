@@ -1,16 +1,9 @@
 {
   "users": [
     {
-      "name": "lê văn huy",
-      "id": "kAcAFY7yG"
-    },
-    {
-      "name": "pham văn dung",
-      "id": "B6k1gf9Z9"
-    },
-    {
-      "name": "nguyễn văn nam",
-      "id": "eWcajpYgs"
+      "name": "lehuy",
+      "phone": "03023",
+      "id": "5xA-e1YUG"
     }
   ]
 }

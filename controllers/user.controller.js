@@ -36,7 +36,7 @@ module.exports.postCreate=function(req,res){
 	if(!req.body.phone){
 		error.push("Phone is not riquire")
 	} 
-	if(error){
+	if(error.length){
 		res.render('users/create',{
 			errors:error,
 			value:value
