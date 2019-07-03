@@ -1,3 +1,4 @@
+
 var shortid=require('shortid');
 var db=require('../db');
 
@@ -26,6 +27,22 @@ module.exports.viewUser=function(req,res){
 
 module.exports.postCreate=function(req,res){
 	req.body.id=shortid.generate();
+	var error=[];
+	var value=req.body;
+
+	if(!req.body.name){
+		error.push("Name is not riquire")
+	}
+	if(!req.body.phone){
+		error.push("Phone is not riquire")
+	} 
+	if(error){
+		res.render('users/create',{
+			errors:error,
+			value:value
+		})
+		return;
+	}
 	db.get('users').push(req.body).write();
 	res.redirect('/users');
 }

@@ -1,0 +1,21 @@
+html
+	head
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+
+	body
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light
+			ul.navbar-nav.mr-auto
+				li.nav-item.active
+					a.nav-link(href='#')
+						| Coder tokyo
+					span.sr-only (current)
+				li.nav-item
+					a.nav-link(href='/users') Users
+				li.nav-item.dropdown
+					a#navbarDropdown.nav-link.dropdown-toggle(href='/users/create', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						| Create User
+				li.nav-item
+					a.nav-link.disabled(href='/users/:id', tabindex='-1', aria-disabled='true') View
+
+		.container.pt-5
+			block content
