@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var db=require('../db');
 
 module.exports.login=function(req,res){
@@ -22,7 +24,8 @@ module.exports.postLogin=function(req,res){
 		return;
 	}
 
-	res.cookie('idUser',user.id);
+	res.cookie('idUser',user.id,{signed: true});
+
 	res.redirect('/users');
 
 
