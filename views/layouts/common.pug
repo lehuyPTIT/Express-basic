@@ -6,16 +6,15 @@ html
 		nav.navbar.navbar-expand-lg.navbar-light.bg-light
 			ul.navbar-nav.mr-auto
 				li.nav-item.active
-					a.nav-link(href='#')
+					a.nav-link(href='/')
 						| Coder tokyo
 					span.sr-only (current)
 				li.nav-item
 					a.nav-link(href='/users') Users
-				li.nav-item.dropdown
-					a#navbarDropdown.nav-link.dropdown-toggle(href='/users/create', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-						| Create User
 				li.nav-item
-					a.nav-link.disabled(href='/users/:id', tabindex='-1', aria-disabled='true') View
+					a.nav-link(href='/users/create') Create users
+				li.nav-item
+					a.nav-link(href='/auth/login') Login
 
 		.container.pt-5
 			block content

@@ -3,7 +3,24 @@
     {
       "name": "lehuy",
       "phone": "03023",
-      "id": "5xA-e1YUG"
+      "id": "5xA-e1YUG",
+      "email": "huyhuys297@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "dung an cut",
+      "phone": "123123",
+      "id": "NfnfvXbcq"
+    },
+    {
+      "name": "sdasdw ",
+      "phone": "jajajajs",
+      "id": "TICpVRJ0g"
+    },
+    {
+      "name": "phạm văn dung",
+      "phone": "dấd",
+      "id": "mCXks-_yp"
     }
   ]
 }
