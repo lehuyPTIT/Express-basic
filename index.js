@@ -9,6 +9,7 @@ var cookieParser = require('cookie-parser')
 
 var usersRoutes=require('./routes/user.route');
 var authRoutes=require('./routes/auth.route');
+var productsRoutes=require('./routes/product.route');
 var middleware=require('./middlewares/auth.middlewares');
 
 app.use(cookieParser(process.env.SESSION_SECRET));
@@ -25,7 +26,7 @@ app.get('/',function(request,response){``
 
 app.use('/users',middleware.checkLogin, usersRoutes);
 app.use('/auth',authRoutes);
-
+app.use('/product',productsRoutes);
 app.listen(port,function(){
 	console.log(' Day la server cus tao '+ port);
 })
