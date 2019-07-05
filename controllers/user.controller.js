@@ -27,8 +27,11 @@ module.exports.viewUser=function(req,res){
 
 module.exports.postCreate=function(req,res){
 	req.body.id=shortid.generate();
+	req.body.avatar=req.file.path.split('/').slice(1).join('/');
+
 	var error=[];
 	var value=req.body;
+
 
 	if(!req.body.name){
 		error.push("Name is not riquire")

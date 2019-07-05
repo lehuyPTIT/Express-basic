@@ -1,6 +1,9 @@
+
+
 var express=require('express');
 var app = express();
 var port=3000;
+
 
 var express = require('express')
 var cookieParser = require('cookie-parser')
@@ -16,7 +19,7 @@ app.use(cookieParser(process.env.SESSION_SECRET));
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
+app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', './views');
 
@@ -26,7 +29,7 @@ app.get('/',function(request,response){``
 
 app.use('/users',middleware.checkLogin, usersRoutes);
 app.use('/auth',authRoutes);
-app.use('/product',productsRoutes);
+app.use('/product',middleware.checkLogin,productsRoutes);
 app.listen(port,function(){
 	console.log(' Day la server cus tao '+ port);
 })

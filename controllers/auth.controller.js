@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 var db=require('../db');
 
 module.exports.login=function(req,res){
