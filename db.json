@@ -53,12 +53,6 @@
   ],
   "products": [
     {
-      "id": "7d38b08e-159f-4608-b235-149eb13afc92",
-      "name": "Brandy - Bar",
-      "image": "uploads/00ee021c43f885d3d69dad38f23725fa",
-      "description": "est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus"
-    },
-    {
       "id": "50836d69-44bc-4664-af46-a002d6c204a4",
       "name": "Raspberries - Frozen",
       "image": "https://loremflickr.com/320/240",
@@ -652,5 +646,8 @@
       "image": "https://loremflickr.com/320/240",
       "description": "vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus"
     }
+  ],
+  "sessions": [
+    
   ]
 }

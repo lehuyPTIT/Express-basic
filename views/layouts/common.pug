@@ -17,6 +17,10 @@ html
 					a.nav-link(href='/auth/login') Login
 				li.nav-item
 					a.nav-link(href='/product') Products
+				li.nav-item
+					a.nav-link(href='/product')
+						span.mr-1 Cart 
+						span=countOfCart
 			if user
 				p=user.name
 			
